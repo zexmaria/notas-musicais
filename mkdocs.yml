@@ -1,0 +1,16 @@
+site_name: Documentação Notas Musicais
+repo_url: https://github.com/zexmaria/notas-musicais
+repo_name: ZeMaria/notas-musicais
+edit_uri: tree/main/docs
+
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo.png
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheet/extra.css
