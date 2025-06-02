@@ -27,6 +27,16 @@ mkdocs-material = "^9.6.14"
 mkdocstrings = "^0.29.1"
 mkdocstrings-python = "^1.16.11"
 
+
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+docs = "mkdocs serve"
+pre_test = "task lint"
+test = "pytest -s -x --cov=notas_musicais -vv"
+post_test =  "coverage.html"
+
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
